@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/orderImageMinuman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/orderNamaMinuman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Minuman"
+                android:textSize="32dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/orderInfoMinuman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet lobortis elit, a sodales odio consectetur ut. Donec eleifend enim tempor elit finibus, tempus congue tellus mattis. Etiam condimentum ante at mauris finibus laoreet. Mauris elementum sodales arcu, vel faucibus eros maximus a. Sed vulputate et tortor ut varius. Aliquam erat volutpat."
+                android:textSize="20dp"
+                android:layout_margin="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:text="Harga Minuman :"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/orderHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga dalam RP"
+                    android:layout_weight="1"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity:"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/decrease"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/abu_abu2"
+                    android:onClick="decreaseInteger"
+                    android:text = "-"/>
+
+                <TextView
+                    android:id="@+id/integer_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"/>
+
+                <Button
+                    android:id="@+id/increase"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/abu_abu2"
+                    android:onClick="increaseInteger"
+                    android:text = "+"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnOrderMore"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_width="150dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Order More"
+                    android:layout_marginLeft="15dp"/>
+
+                <Button
+                    android:id="@+id/btnMyOrder"
+                    android:textAllCaps="false"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/abu_abu1"
+                    android:text="My Order"/>
+            </LinearLayout>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp">
+
+                <Button
+                    android:id="@+id/btnOrder"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Order Now"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/orange_primary"
+                    android:gravity="center"/>
+            </androidx.gridlayout.widget.GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
