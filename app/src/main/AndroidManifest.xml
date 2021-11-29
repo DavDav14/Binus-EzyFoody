@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BinusEzyFoody">
         <activity
+            android:name=".Pay"
+            android:exported="true" />
+        <activity
             android:name=".MyOrder"
             android:exported="true" />
         <activity
